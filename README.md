@@ -7,39 +7,57 @@ The USB keyboard PCB has 8 row (R0 - R7 ) and 18 column pins (C0 - C17).
 
 ## Maping
 
- x |R0         |R1         |R2         |R3               |R4              |R5         |R6               |R7
----|-----------|-----------|-----------|-----------------|----------------|-----------|-----------------|---
-C0 |pause      |tab        |a          |esc              |z               |<65314>    |ˇ                |1
-C2 |q          |caps_lock  |s          |<                |x               |<65315>    |f1               |2
-C15|w          |shift      |shift_r    |media_volume_down|media_volume_up |media_next |media_prev       |<269025153>
-C3 |e          |f3         |d          |f4               |c               |<65319>    |f2               |3
-C4 |r          |t          |f          |g                |v               |b          |5                |4
-C5 |u          |y          |j          |h                |m               |n          |6                |7
-C6 |i          |õ          |k          |f6               |,               |<0>        |'                |8
-C7 |o          |f7         |l          |                 |.               |menu       |f8               |9
-C14|+          |.          |enter      |up               |media_play_pause|left       |home             |end
-C13|scroll_lock|6          |3          |.                |*               |-          |page_up          |page_down
-C12|8          |<65437>5   |2          |0                |/               |right      |insert           |<269025071>
-C11|7          |4          |1          |space            |num_lock        |down       |delete           |<269025066>
-C10|<0>        |backspace  |'          |f11              |enter           |f12        |f9               |f10
-C8 |p          |ü          |ö          |ä                |'               |-          |+                |0
-C9 |scroll_lock|0          |           |alt              |                |<65027>    |0                |print_screen
-C0 |pause      |<269025066>|alt        |<269025071>      |ctrl_r          |<269025067>|ctrl             |f5
-C16|<269025049>|cmd (win)  |<269025063>|<65385>          |<269025062>     |<269025039>|media_volume_mute|<269025051>
-C17|<65332>    |<269025072>|cmd_r      |<269025117>      |<269025045>     |<269025045>|<269025048>      |<65329>  
+ x |R0         |R1       |R2     |R3               |R4              |R5         |R6               |R7
+---|-----------|---------|-------|-----------------|----------------|-----------|-----------------|---
+C0 |pause      |tab      |a      |esc              |z               |<65314>    |ˇ                |1
+C2 |q          |caps_lock|s      |<                |x               |<65315>    |f1               |2
+C15|w          |shift    |shift_r|media_volume_down|media_volume_up |media_next |media_prev       |Tools
+C3 |e          |f3       |d      |f4               |c               |<65319>    |f2               |3
+C4 |r          |t        |f      |g                |v               |b          |5                |4
+C5 |u          |y        |j      |h                |m               |n          |6                |7
+C6 |i          |õ        |k      |f6               |,               |<0>        |'                |8
+C7 |o          |f7       |l      |                 |.               |menu       |f8               |9
+C14|+          |.        |enter  |up               |media_play_pause|left       |home             |end
+C13|scroll_lock|6        |3      |.                |*               |-          |page_up          |page_down
+C12|8          |<65437>5 |2      |0                |/               |right      |insert           |Sleep
+C11|7          |4        |1      |space            |num_lock        |down       |delete           |PowerOff
+C10|<0>        |backspace|'      |f11              |enter           |f12        |f9               |f10
+C8 |p          |ü        |ö      |ä                |'               |-          |+                |0
+C9 |scroll_lock|0        |       |alt              |                |<65027>    |0                |print_screen
+C0 |pause      |PowerOff |alt    |Sleep            |ctrl_r          |WakeUp     |ctrl             |f5
+C16|Mail       |cmd (win)|Forward|Cancel           |Back            |<269025039>|media_volume_mute|Search
+C17|<65332>    |Favorites|cmd_r  |Explorer         |AudioStop       |Calculator |HomePage         |<65329>  
 
+Decmal   |Hex       |name
+---------|----------|---
+    65027|0xfe03    |ISO_Level3_Shift
+    65314|0xff22    |Muhenkan
+    65315|0xff23    |Henkan_Mode
+    65319|0xff27    |Hiragana_Katakana
+    65329|0xff31    |Hangul	
+    65332|0xff34    |Hangul_Hanja
+    65437|0xff9d    |KP_Begin
+    65385|0xff69    |Cancel
+269025039|          |
+269025045|0x1008ff15|XF86AudioStop
+269025048|0x1008ff18|XF86HomePage
+269025049|0x1008ff19|XF86Mail
+269025051|0x1008ff1b|XF86Search
+269025153|0x1008ff81|XF86Tools
+269025062|0x1008ff26|XF86Back
+269025063|0x1008ff27|XF86Forward
+269025066|0x1008ff2a|XF86PowerOff
+269025067|0x1008ff2b|XF86WakeUp
+269025071|0x1008ff2f|XF86Sleep
+269025072|0x1008ff30|XF86Favorites
+269025117|0x1008ff5d|XF86Explorer
+269025053|0x1008ff1d|XF86Calculator
 
-<269025049> Opens mail
+## 
 
-<269025071> PC sleep
+Dump the keyboard layout from the console:
 
-<269025066> PC OFF
-
-<269025117> Open Home folder
-
-<269025045> Stop ???
-
-<269025045> Opens Calculator
+    xmodmap -pk >ConsolekbLayout.txt 
 
 ## Links
 
