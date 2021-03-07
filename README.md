@@ -7,8 +7,8 @@ The USB keyboard PCB has 8 row (R0 - R7 ) and 18 column pins (C0 - C17).
 
 ## Maping
 
- + |R0         |R1         |R2         |R3               |R4              |R5         |R6               |R7
----|---|---|---|---|---|---|---|---
+ x |R0         |R1         |R2         |R3               |R4              |R5         |R6               |R7
+---|-----------|-----------|-----------|-----------------|----------------|-----------|-----------------|---
 C0 |pause      |tab        |a          |esc              |z               |<65314>    |ˇ                |1
 C2 |q          |caps_lock  |s          |<                |x               |<65315>    |f1               |2
 C15|w          |shift      |shift_r    |media_volume_down|media_volume_up |media_next |media_prev       |<269025153>
@@ -28,11 +28,17 @@ C0 |pause      |<269025066>|alt        |<269025071>      |ctrl_r          |<2690
 C16|<269025049>|cmd (win)  |<269025063>|<65385>          |<269025062>     |<269025039>|media_volume_mute|<269025051>
 C17|<65332>    |<269025072>|cmd_r      |<269025117>      |<269025045>     |<269025045>|<269025048>      |<65329>  
 
+
 <269025049> Opens mail
+
 <269025071> PC sleep
+
 <269025066> PC OFF
+
 <269025117> Open Home folder
+
 <269025045> Stop ???
+
 <269025045> Opens Calculator
 
 ## Links
