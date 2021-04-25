@@ -7,9 +7,11 @@ The USB keyboard PCB has 8 row (R0 - R7 ) and 18 column pins (C0 - C17).
 
 ## Maping
 
- x |R0         |R1       |R2     |R3               |R4              |R5         |R6               |R7
+Maping Rows and Columns.
+
+ x |R0         |R1       |R2     |R3               |R4              |R5        |R6               |R7
 ---|-----------|---------|-------|-----------------|----------------|----------|-----------------|---
-C0 |pause      |tab      |a      |esc              |z               |65314     |ˇ                |1
+C1 |pause      |tab      |a      |esc              |z               |65314     |ˇ                |1
 C2 |q          |caps_lock|s      |<                |x               |65315     |f1               |2
 C15|w          |shift    |shift_r|media_volume_down|media_volume_up |media_next|media_prev       |Tools
 C3 |e          |f3       |d      |f4               |c               |65319     |f2               |3
@@ -27,7 +29,6 @@ C9 |scroll_lock|0        |       |alt              |                |65027     |
 C0 |pause      |PowerOff |alt    |Sleep            |ctrl_r          |WakeUp    |ctrl             |f5
 C16|Mail       |cmd (win)|Forward|Cancel           |Back            |269025039 |media_volume_mute|Search
 C17|65332      |Favorites|cmd_r  |Explorer         |AudioStop       |Calculator|HomePage         |65329
-
 
 Decimal|Hex|name
 ---|---|---
@@ -54,11 +55,37 @@ Decimal|Hex|name
 269025117|0x1008ff5d|XF86Explorer
 269025053|0x1008ff1d|XF86Calculator
 
-## 
+## Dump the keyboard layout
 
 Dump the keyboard layout from the console:
 
-    xmodmap -pk >ConsolekbLayout.txt 
+    xmodmap -pk >ConsolekbLayout.txt
+
+## Parts
+
+0. PCB
+   ![Single button PCB](img/single_key_pcb.svg)
+1. Signal Diode **1N4148** Fast switching diode
+2. Resistor 120Ω 1/6W
+
+## Connect
+
+Row -> SWA
+Col -> SWB
+
+## Tools
+
+Python script readkey.py to read keyboard inputs.
+
+Install requirements:
+
+    pip3 install python3-xlib pynput
+
+Run:
+
+    python3 ./tools/readkey.py 
+
+![readkey.py screenshot](img/readkey.png)
 
 ## Links
 
