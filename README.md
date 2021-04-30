@@ -1,6 +1,6 @@
 # Sõrmlaud
 
-I had one old and cheap keyboard with missing keys. So I take it apart and found this controller PCB board. The board pads were coated with graphite. I removed it and soldered wires on it.
+I had one old and cheap keyboard with missing keys. So I take it apart and found this controller PCB board. The board pads were coated with graphite. I removed it and soldered wires on it. And put it on a breadboard. Then I mapped all rows and column combinations to find what scancode they output.
 
 The USB keyboard PCB has 8 row (R0 - R7 ) and 18 column pins (C0 - C17).
 
