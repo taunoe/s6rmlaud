@@ -1,11 +1,25 @@
 # Sõrmlaud
 
-I had one old and cheap keyboard with missing keys. So I take it apart and found this controller PCB board. The board pads were coated with graphite. I removed it and soldered wires on it. And put it on a breadboard. Then I mapped all rows and column combinations to find what scancode they output.
+I had one old and cheap keyboard with missing keys. So I take it apart and found this controller PCB board. The board pads were coated with graphite. I removed it and soldered wires on it. And put it on a breadboard. Then I mapped all rows and column combinations to find what scancode they output. For this, I have the python script to display keycodes.
 
 The USB keyboard PCB has 8 row (R0 - R7 ) and 18 column pins (C0 - C17).
 
 ![Front PCB image](img/front.jpg)
 ![Back PCB image](img/back.jpg)
+
+## Tools
+
+Python script readkey.py to read keyboard inputs.
+
+Install requirements:
+
+    pip3 install python3-xlib pynput
+
+Run:
+
+    python3 ./tools/readkey.py 
+
+![readkey.py screenshot](img/readkey.png)
 
 ## Maping
 
@@ -63,7 +77,9 @@ Dump the keyboard layout from the console:
 
     xmodmap -pk >ConsolekbLayout.txt
 
-## Parts
+## Custom PCB
+
+Then I designed PCB for one switch.
 
 0. PCB
    ![Single button PCB](img/single_key_pcb.svg)
@@ -75,19 +91,7 @@ Dump the keyboard layout from the console:
 Row -> SWA
 Col -> SWB
 
-## Tools
 
-Python script readkey.py to read keyboard inputs.
-
-Install requirements:
-
-    pip3 install python3-xlib pynput
-
-Run:
-
-    python3 ./tools/readkey.py 
-
-![readkey.py screenshot](img/readkey.png)
 
 ## Links
 
