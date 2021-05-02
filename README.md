@@ -1,6 +1,18 @@
 # Sõrmlaud
 
-I had one old and cheap keyboard with missing keys. So I take it apart and found this controller PCB board. The board pads were coated with graphite. I removed it and soldered wires on it. And put it on a breadboard. Then I mapped all rows and column combinations to find what scancode they output. For this, I have the python script to display keycodes.
+I had one old and cheap rubber dome keyboard with missing keys. So I take it apart and found this controller PCB board. The board pads were coated with graphite. I removed it and soldered wires on it. And put it on a breadboard. Then I mapped all rows and column combinations to find what scancode they output. For this, I have the python script to display key is pressed.
+
+Then I designed PCB for one switch. It is with breadboard friendly layout and uses through-hole components. And made a plywood mounting plate, stained it black and lacquered. I connected the buttons through the mounting plate to the circuit boards.
+
+Then I figured out which buttons I wanted and soldered right C and R wires in the right places.
+
+I also made a plywood case.
+
+The next part was keycaps. I could use plastic ones. But I wanted them to be symmetrical and with symbols on them. So again I made them from plywood. The top layer is solid oak. Other is birch tree plywood. Laser cutting them and glued together. One part is 3D printed. Cross shape part that connects keycaps to switches. The hardest part was sanding the keycaps to the right shape. I did it by hand, but it should be mechanized process. And also my keycaps are larger than normal keycaps on the keyboard.
+
+All wooden parts are finished with Liberon Black Bison Antikvax.
+
+## Keyboard controller PCB
 
 The USB keyboard PCB has 8 row (R0 - R7 ) and 18 column pins (C0 - C17).
 
@@ -77,9 +89,7 @@ Dump the keyboard layout from the console:
 
     xmodmap -pk >ConsolekbLayout.txt
 
-## Custom PCB
-
-Then I designed PCB for one switch.
+## Custom switch PCB
 
 0. PCB
    ![Single button PCB](img/single_key_pcb.svg)
@@ -90,8 +100,6 @@ Then I designed PCB for one switch.
 
 Row -> SWA
 Col -> SWB
-
-
 
 ## Links
 
