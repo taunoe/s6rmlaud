@@ -1,5 +1,7 @@
 # Sõrmlaud
 
+![Custom Wooden Mechanical Keyboard - Tauno Erik](img/cover.jpg)
+
 I had one old and cheap rubber dome keyboard with missing keys. So I take it apart and found this controller PCB board. The board pads were coated with graphite. I removed it and soldered wires on it. And put it on a breadboard. Then I mapped all rows and column combinations to find what scancode they output. For this, I have the python script to display which key is pressed.
 
 Then I designed PCB for one switch. It is with breadboard friendly layout and uses through-hole components. And made a plywood mounting plate, stained it black and lacquered. I connected the buttons through the mounting plate to the circuit boards.
@@ -106,6 +108,7 @@ Col -> SWB
 - Ben Eater [So how does a PS/2 keyboard interface work?](https://www.youtube.com/watch?v=7aXbh9VUB3U)
 - USB HID Keyboard scan codes as per USB spec 1.11 [usb_hid_keys.h](doc/usb_hid_keys.h)
 - Windows Keyboard Scan Code Specification [usb_scancode.odf](doc/usb_scancode.odt)
+- [Custom Wooden Mechanical Keyboard](https://taunoerik.art/2021/05/02/custom-wooden-mechanical-keyboard/)
 
 __
 
