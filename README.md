@@ -1,6 +1,6 @@
 # Sõrmlaud
 
-I had one old and cheap rubber dome keyboard with missing keys. So I take it apart and found this controller PCB board. The board pads were coated with graphite. I removed it and soldered wires on it. And put it on a breadboard. Then I mapped all rows and column combinations to find what scancode they output. For this, I have the python script to display key is pressed.
+I had one old and cheap rubber dome keyboard with missing keys. So I take it apart and found this controller PCB board. The board pads were coated with graphite. I removed it and soldered wires on it. And put it on a breadboard. Then I mapped all rows and column combinations to find what scancode they output. For this, I have the python script to display which key is pressed.
 
 Then I designed PCB for one switch. It is with breadboard friendly layout and uses through-hole components. And made a plywood mounting plate, stained it black and lacquered. I connected the buttons through the mounting plate to the circuit boards.
 
